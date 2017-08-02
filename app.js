@@ -3,6 +3,12 @@ var swig = require('swig');
 var app = express();
 //加载模板
 
+//当用户访问的URL以/public开始，那么直接返回对应__dirname+'/public'下的而文件
+ const path = require('path')
+//app.use('./public',express.static(__dirname+'/public'));
+//app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, '/add')));
+ 
 //第一参数：模板引擎的名称，同时是模板文件的后缀，第二个参数表示用于解析处理模板内容的方法
 app.engine('html',swig.renderFile);
 app.set('views','./views');
@@ -30,6 +36,3 @@ mongoose.connect('mongodb://localhost:27017/blog',function(err){
 	}
 });
 //监听请求
-//当用户访问的URL以/public开始，那么直接返回对应__dirname+'/public'下的而文件
-//app.use('./public',express.static(__dirname+'/public'));
-app.use(express.static(__dirname + '/public'));//设置静态文件目录

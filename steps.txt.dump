@@ -1,0 +1,8 @@
+https://www.mongodb.com/download-center?jmp=nav#community  下载 mongodb
+
+mongod --dbpath=F:\jobjob\Blog2\db port#27018  貌似写错了 port  
+开启成功  It looks like you are trying to access MongoDB over HTTP on the native driver port.
+
+使用mongodb https://www.mongodb.com
+数据保存    使用mongoose操作数据库   http://mongoosejs.com
+创建model  通过Schema 创建模型类   mongoose.model（‘模型类名称’,Schema）
