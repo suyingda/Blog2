@@ -9,6 +9,6 @@ node_modules/
 #.idea
 #cordova 相关加载
 #/static/cordova
-
+#public
 #忽略 具体 的 api 接口 基础配置
 #fetch.api.base.js
