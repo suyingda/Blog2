@@ -8,6 +8,34 @@
 
 </head>
 <body>
-	<h1>roger that</h1>
+	<form action="" name='fr' >
+		账号：<input type='text'  name='zz' value=''><br/>
+		密码：<input type='text'  name='mm' value=''><br/>
+		姓名：<input type='text'  name='xb' value=''><br/>
+		<input type='submit' onclick='submit'  value='提交'>
+	</form>
+	<script type="text/javascript">
+	 function submit(){
+		$.ajax({
+			type:"get",
+			url:"/api/user/register",
+			data:{
+				zz:document.fr.zz.value,
+				mm:document.fr.mm.value,
+				xb:document.fr.xb.value
+			},
+			/*dataType:"jsonp",
+			jsonp:"callback",
+			jsonpCallback:"jsona",*/
+			success:function(json){
+				console.log(json)
+				 
+			},
+			error:function(){
+				alert("请求出错！");
+			}
+		})
+	}
+	</script>
 </body>
 </html>

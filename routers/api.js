@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/api',function(req,res,next){
+/*用户注册*/
+router.get('/user/register',function(req,res,next){
 	res.send('Api-User')
 });
 

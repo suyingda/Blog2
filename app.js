@@ -18,6 +18,9 @@ swig.setDefaults({cache:false})
 //加载数据库模块
 var mongoose = require('mongoose');
 
+/*加载body-parser,用来处理post提交过来的数据*/
+var bodyParser = require('body-parser')
+app.use(bodyParser.urlencoded({extended:true}))  //配置bodyParse
 //根据不同功能划分不同模块
 app.use('/admin',require('./routers/admin'));
 app.use('/api',require('./routers/api'));
