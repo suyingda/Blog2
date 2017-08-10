@@ -8,7 +8,7 @@
 
 </head>
 <body>
-	<form action="" name='fr' >
+	<form   name='fr' >
 		账号：<input type='text'  name='zz' value=''><br/>
 		密码：<input type='text'  name='mm' value=''><br/>
 		姓名：<input type='text'  name='xb' value=''><br/>
@@ -17,7 +17,7 @@
 	<script type="text/javascript">
 	 function submit(){
 		$.ajax({
-			type:"get",
+			type:"post",
 			url:"/api/user/register",
 			data:{
 				zz:document.fr.zz.value,
